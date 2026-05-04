@@ -1,18 +1,20 @@
 <?php
 
-declare(strict_types=1);
+use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
 
-define('BASE_PATH', dirname(__DIR__));
+define('LARAVEL_START', microtime(true));
 
-require BASE_PATH . '/autoload.php';
-require BASE_PATH . '/app/helpers.php';
+// Determine if the application is in maintenance mode...
+if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
+    require $maintenance;
+}
 
-use App\Controllers\CategoryController;
-use App\Controllers\HomeController;
-use App\Core\Router;
+// Register the Composer autoloader...
+require __DIR__.'/../vendor/autoload.php';
 
-$router = new Router();
-$router->get('/', HomeController::class, 'index');
-$router->get('/categoria/{slug}', CategoryController::class, 'show');
+// Bootstrap Laravel and handle the request...
+/** @var Application $app */
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
-$router->dispatch($_SERVER['REQUEST_URI'] ?? '/');
+$app->handleRequest(Request::capture());

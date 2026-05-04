@@ -3,55 +3,29 @@
 declare(strict_types=1);
 
 /**
- * Prefijo de la app en el servidor (p. ej. "" o "/MOVA/public") para armar URLs de /assets y rutas internas.
+ * Prefijo de URL manual (subcarpeta) cuando MOVA_BASE_URL está definido.
  */
 function mova_public_prefix(): string
 {
-    $config = require dirname(__DIR__) . '/config/config.php';
-    $base = rtrim((string) ($config['base_url'] ?? ''), '/');
-    if ($base !== '') {
-        return $base;
-    }
-    $script = isset($_SERVER['SCRIPT_NAME']) ? (string) $_SERVER['SCRIPT_NAME'] : '';
-    $script = str_replace('\\', '/', $script);
-    if ($script === '' || $script === '/') {
-        return '';
-    }
-    $dir = dirname($script);
-    $dir = rtrim(str_replace('\\', '/', $dir), '/');
-    if ($dir === '' || $dir === '.' || $dir === '/') {
-        return '';
-    }
-
-    return $dir;
+    return rtrim((string) config('mova.base_url', ''), '/');
 }
 
-/**
- * URL a un archivo bajo /public (CSS, JS, imágenes). Funciona en subcarpeta sin base_url en config.
- */
 function mova_asset_href(string $path): string
 {
-    $path = '/' . ltrim($path, '/');
-
-    return mova_public_prefix() . $path;
+    return asset(ltrim($path, '/'));
 }
 
-/**
- * URL final para imágenes/CSS: rutas locales respetan base_url o prefijo automático.
- */
 function mova_media_url(string $url): string
 {
     if (preg_match('#^https?://#i', $url)) {
         return $url;
     }
-    $path = '/' . ltrim($url, '/');
 
-    return mova_public_prefix() . $path;
+    return asset(ltrim($url, '/'));
 }
 
 /**
- * Enlace interno: no anteponer prefijo a anclas (#) ni a rutas ya absolutas http(s).
- * Si base_url está vacío, usa el mismo prefijo que los assets (subcarpeta).
+ * Enlaces internos; con base vacía usa la URL de la aplicación (APP_URL).
  */
 function mova_page_href(string $base, string $href): string
 {
@@ -68,7 +42,7 @@ function mova_page_href(string $base, string $href): string
 
     $root = rtrim($base, '/');
     if ($root === '') {
-        $root = mova_public_prefix();
+        return url($href[0] === '/' ? $href : '/' . $href);
     }
     $path = $href[0] === '/' ? $href : '/' . $href;
 

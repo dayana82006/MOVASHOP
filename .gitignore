@@ -1,0 +1,18 @@
+# PHP / entorno
+.env
+.env.*
+!.env.example
+/vendor/
+
+# IDE / OS
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
+*.log
+
+# Cursor (opcional; descomenta si no quieres versionar)
+# .cursor/
+
+# Artefacto suelto (no forma parte del proyecto)
+8696e4e4-733f-46cf-bdbd-508448e56940.png

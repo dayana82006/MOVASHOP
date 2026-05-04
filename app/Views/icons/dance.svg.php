@@ -1,0 +1,1 @@
+<svg class="ico" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="2"/><path d="m9 20 3-7 3 7"/><path d="m9 12 3-4 3 4"/><path d="M9 20H7a2 2 0 0 1-2-2v-3"/><path d="M15 20h2a2 2 0 0 0 2-2v-3"/></svg>

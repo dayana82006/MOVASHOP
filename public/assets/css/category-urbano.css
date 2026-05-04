@@ -1,0 +1,277 @@
+/* Urbano — estilo minimal / wireframe: blanco, negro, enlaces azules, serif + sans */
+
+.page-urbano-wire.mova-app {
+  padding-top: 72px;
+  padding-bottom: 88px;
+  background: #ffffff;
+  color: #000000;
+}
+
+.page-urbano-wire .bottom-nav {
+  background: #ffffff;
+  border-top: 1px solid #cccccc;
+  color: #333333;
+  box-shadow: none;
+}
+
+.page-urbano-wire .bottom-nav__item {
+  color: #555555;
+}
+
+.page-urbano-wire .bottom-nav__item.is-active {
+  color: #0000ee;
+}
+
+.page-urbano-wire .bottom-nav__item svg {
+  stroke: currentColor;
+}
+
+.page-urbano-wire .badge {
+  background: #e8e8e8;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+/* Cabecera urbana clara */
+.page-urbano-wire .urban-fixed-head {
+  background: #ffffff;
+  border-bottom: 1px solid #cccccc;
+  box-shadow: none;
+}
+
+.page-urbano-wire .urban-ribbon {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: #333333;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.page-urbano-wire .urban-nav__links a {
+  color: #0000ee;
+  text-decoration: underline;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 0.85rem;
+}
+
+.page-urbano-wire .urban-nav__links a[aria-current="page"] {
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.page-urbano-wire .urban-nav__logo {
+  color: #000000;
+  letter-spacing: 0.2em;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page-urbano-wire .urban-icon-btn {
+  color: #000000;
+}
+
+/* Contenido principal */
+.urban-wire {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 28px 22px 48px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.urban-wire__intro {
+  margin: 0 0 12px;
+  font-size: 0.88rem;
+  color: #222222;
+}
+
+.urban-wire__navtop {
+  margin: 0 0 36px;
+}
+
+.urban-wire__a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.urban-wire__a:visited {
+  color: #551a8b;
+}
+
+.urban-wire__block {
+  margin-bottom: 40px;
+}
+
+.urban-wire__label {
+  margin: 0 0 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.urban-wire__heading {
+  margin: 0 0 14px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.urban-wire__heading--section {
+  font-size: 1.35rem;
+  margin-bottom: 20px;
+}
+
+.urban-wire__body {
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+  color: #222222;
+}
+
+.urban-wire__cta {
+  margin: 0;
+}
+
+/* Indicadores tipo slider */
+.urban-wire__dots {
+  display: flex;
+  gap: 12px;
+  margin: 8px 0 36px;
+  align-items: center;
+}
+
+.urban-wire__dot {
+  width: 28px;
+  height: 10px;
+  border: 1px solid #000000;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.urban-wire__dot.is-on {
+  background: #000000;
+}
+
+/* Features */
+.urban-wire__feature {
+  margin-bottom: 32px;
+}
+
+.urban-wire__icon {
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.urban-wire__icon .ico {
+  width: 28px;
+  height: 28px;
+}
+
+.urban-wire__feat-title {
+  margin: 0 0 6px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.urban-wire__feat-text {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #333333;
+}
+
+/* Lista productos minimal */
+.urban-wire__products {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid #dddddd;
+}
+
+.urban-wire__plist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.urban-wire__prow {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.urban-wire__prow-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.urban-wire__prow-link:hover .urban-wire__pname {
+  text-decoration: underline;
+  color: #0000ee;
+}
+
+.urban-wire__pimg {
+  flex: 0 0 56px;
+  height: 70px;
+  overflow: hidden;
+  border: 1px solid #dddddd;
+  background: #f5f5f5;
+}
+
+.urban-wire__pimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.urban-wire__pinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+.urban-wire__pname {
+  font-weight: 700;
+  color: #000000;
+}
+
+.urban-wire__pold {
+  text-decoration: line-through;
+  color: #888888;
+  font-size: 0.8rem;
+}
+
+.urban-wire__pprice {
+  font-weight: 600;
+  color: #000000;
+}
+
+.urban-wire__back {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid #dddddd;
+}
+
+.urban-wire__anchor {
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .page-urbano-wire .urban-nav__links {
+    display: flex;
+    justify-self: start;
+  }
+}

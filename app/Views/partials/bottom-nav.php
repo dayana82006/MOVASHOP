@@ -5,15 +5,15 @@ $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?? '/';
 $path = rtrim($path, '/') ?: '/';
 ?>
 <nav class="bottom-nav" aria-label="Navegación principal">
-    <a class="bottom-nav__item <?= $path === '/' || $path === '' ? 'is-active' : '' ?>" href="<?= htmlspecialchars($base, ENT_QUOTES, 'UTF-8') ?>/">
+    <a class="bottom-nav__item <?= $path === '/' || $path === '' ? 'is-active' : '' ?>" href="<?= htmlspecialchars(mova_page_href($base, '/'), ENT_QUOTES, 'UTF-8') ?>">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         <span>Inicio</span>
     </a>
-    <a class="bottom-nav__item" href="#estilos">
+    <a class="bottom-nav__item" href="#colecciones">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         <span>Categorías</span>
     </a>
-    <a class="bottom-nav__item" href="#">
+    <a class="bottom-nav__item" href="#favoritos">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         <span>Favoritos</span>
     </a>

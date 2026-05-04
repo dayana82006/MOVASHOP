@@ -13,12 +13,12 @@ $base = rtrim((string) ($config['base_url'] ?? ''), '/');
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cossette+Texte:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?= htmlspecialchars($base, ENT_QUOTES, 'UTF-8') ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?= htmlspecialchars(mova_asset_href('assets/css/style.css'), ENT_QUOTES, 'UTF-8') ?>">
 </head>
 <body class="mova-app<?= isset($bodyClass) && $bodyClass !== '' ? ' ' . htmlspecialchars($bodyClass, ENT_QUOTES, 'UTF-8') : '' ?>">
 <?php require __DIR__ . '/partials/header.php'; ?>
 <?= $content ?>
 <?php require __DIR__ . '/partials/bottom-nav.php'; ?>
-<script src="<?= htmlspecialchars($base, ENT_QUOTES, 'UTF-8') ?>/assets/js/app.js" defer></script>
+<script src="<?= htmlspecialchars(mova_asset_href('assets/js/app.js'), ENT_QUOTES, 'UTF-8') ?>" defer></script>
 </body>
 </html>

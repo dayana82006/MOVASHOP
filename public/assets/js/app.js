@@ -4,6 +4,8 @@
 
   var slides = hero.querySelectorAll('.hero-slide');
   var dots = hero.querySelectorAll('.hero__dot');
+  if (slides.length < 2 || dots.length === 0) return;
+
   var total = slides.length;
   var index = 0;
   var timer = null;

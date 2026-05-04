@@ -828,6 +828,324 @@ a {
   min-height: 168px;
 }
 
+/* ========== Inicio MOVA (mockup: hero dual + momentos + colecciones + favoritos + barra beneficios) ========== */
+
+.hero-dual {
+  position: relative;
+  margin: 0 0 8px;
+  border-radius: 0 0 22px 22px;
+  overflow: hidden;
+}
+
+.hero-dual__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: min(70vh, 560px);
+}
+
+.hero-dual__cell {
+  background-size: cover;
+  background-position: center top;
+  filter: brightness(0.58) saturate(0.92);
+}
+
+.hero-dual__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  padding: 32px 20px 40px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.55) 45%, rgba(0, 0, 0, 0.82) 100%);
+}
+
+.hero-dual__title {
+  margin: 0 0 10px;
+  max-width: 320px;
+  font-size: clamp(1.35rem, 4.5vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.hero-dual__subtitle {
+  margin: 0 0 12px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-dual__rule {
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin: 0 auto 22px;
+  background: #8e7ab5;
+  border-radius: 2px;
+}
+
+html.mova-home .hero-dual__rule {
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.hero-dual__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  max-width: 360px;
+}
+
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  min-width: 0;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.btn-hero--solid {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+}
+
+.btn-hero--outline {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.btn-hero--outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Bandas con título */
+.home-band__title {
+  margin: 0 0 16px;
+  padding: 0 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.home-scroll {
+  overflow-x: auto;
+  padding: 0 16px 8px;
+  margin: 0 -16px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.home-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.home-scroll__track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  padding-bottom: 8px;
+}
+
+.moment-card,
+.collection-card {
+  position: relative;
+  flex: 0 0 min(42vw, 200px);
+  width: min(42vw, 200px);
+  min-height: 260px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #111 center/cover no-repeat;
+  background-image: var(--bg);
+  color: inherit;
+  text-decoration: none;
+}
+
+.moment-card::before,
+.collection-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(0, 0, 0, 0.88));
+}
+
+.moment-card__inner,
+.collection-card__inner {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px;
+}
+
+.moment-card__name,
+.collection-card__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.moment-card__text,
+.collection-card__text {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.moment-card__go,
+.collection-card__go {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+/* Favoritos grid */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 0 16px 24px;
+}
+
+@media (min-width: 520px) {
+  .favorites-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.fav-card__link {
+  position: relative;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.fav-card__heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+
+.fav-card__media {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.fav-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.fav-card__meta {
+  padding: 12px 10px 14px;
+}
+
+.fav-card__name {
+  margin: 0 0 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.fav-card__price {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Barra beneficios inferior */
+.benefits-bar {
+  margin-top: 8px;
+  padding: 28px 16px 32px;
+  background: #141414;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.benefits-bar__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 720px) {
+  .benefits-bar__inner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.benefits-bar__item {
+  text-align: center;
+}
+
+.benefits-bar__icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.benefits-bar__icon .ico {
+  filter: drop-shadow(0 0 6px var(--accent-glow));
+}
+
+.benefits-bar__title {
+  margin: 0 0 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.benefits-bar__text {
+  margin: 0;
+  font-size: 0.68rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.55);
+}
+
 @media (min-width: 480px) {
   .promo-banner__inner {
     grid-template-columns: 1fr 1fr;
@@ -836,5 +1154,10 @@ a {
 
   .hero-slide__title {
     font-size: 2.1rem;
+  }
+
+  .hero-dual__title {
+    max-width: 420px;
+    font-size: 1.95rem;
   }
 }

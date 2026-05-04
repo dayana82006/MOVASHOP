@@ -7,7 +7,8 @@
 declare(strict_types=1);
 
 $uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?? '/');
-$file = __DIR__ . $uri;
+$rel = ltrim($uri, '/');
+$file = $rel === '' ? __DIR__ : __DIR__ . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $rel);
 if ($uri !== '/' && is_file($file)) {
     return false;
 }

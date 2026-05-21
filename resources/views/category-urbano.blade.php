@@ -45,7 +45,7 @@
             @foreach ($products as $p)
                 <li class="urban-wire__prow">
                     <a class="urban-wire__prow-link" href="#">
-                        <span class="urban-wire__pimg"><img src="{{ $p['img'] }}" alt="" loading="lazy" width="80" height="100"></span>
+                        <span class="urban-wire__pimg"><img src="{{ mova_media_url($p['img']) }}" alt="" loading="lazy" width="80" height="100"></span>
                         <span class="urban-wire__pinfo">
                             <span class="urban-wire__pname">{{ $p['name'] }}</span>
                             <span class="urban-wire__pold">{{ $p['old'] }}</span>

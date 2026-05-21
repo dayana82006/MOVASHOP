@@ -9,7 +9,7 @@
                 <a class="fav-card__link" href="{{ mova_page_href($movaBase, $f['href']) }}">
                     <span class="fav-card__heart" aria-hidden="true">♡</span>
                     <div class="fav-card__media">
-                        <img src="{{ $f['img'] }}" alt="" loading="lazy" width="400" height="500">
+                        <img src="{{ mova_media_url($f['img']) }}" alt="" loading="lazy" width="400" height="500">
                     </div>
                     <div class="fav-card__meta">
                         <h3 class="fav-card__name">{{ $f['name'] }}</h3>

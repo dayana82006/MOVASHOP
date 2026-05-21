@@ -27,9 +27,9 @@
 
 /* Solo página de inicio: morado (variables en <html> para que hereden header, hero y main) */
 html.mova-home {
-  --accent: #a855f7;
-  --accent-glow: rgba(168, 85, 247, 0.55);
-  --accent-deep: #7c3aed;
+  --accent: #e7dcb8;
+  --accent-glow: rgba(231, 196, 163, 0.55);
+  --accent-deep: #e2d5b8;
   --border-accent: rgba(168, 85, 247, 0.35);
   --shadow-accent-drop: rgba(168, 85, 247, 0.35);
   --shadow-accent-soft: rgba(168, 85, 247, 0.25);

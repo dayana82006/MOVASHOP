@@ -6,7 +6,7 @@
     <div class="home-scroll">
         <div class="home-scroll__track home-scroll__track--collections">
             @foreach ($collections as $c)
-                <a class="collection-card" href="{{ mova_page_href($movaBase, $c['href']) }}" style="--bg:url('{{ $c['img'] }}')">
+                <a class="collection-card" href="{{ mova_page_href($movaBase, $c['href']) }}" style="--bg:url('{{ mova_media_url($c['img']) }}')">
                     <span class="collection-card__inner">
                         <span class="collection-card__name">{{ $c['name'] }}</span>
                         <span class="collection-card__text">{{ $c['text'] }}</span>

@@ -6,6 +6,12 @@ namespace App\Models;
 
 final class Category
 {
+    private const IMG_BAILARINA = '/assets/imagenes/bailarinainicio.png';
+    private const IMG_CASUAL = '/assets/imagenes/casualinicio.png';
+    private const IMG_URBAN = '/assets/imagenes/urban.png';
+    private const IMG_URBAN2 = '/assets/imagenes/urban2.png';
+    private const IMG_URBANO = '/assets/imagenes/urbano.png';
+
     public function __construct(
         public readonly int $id,
         public readonly string $name,
@@ -18,12 +24,12 @@ final class Category
     public static function all(): array
     {
         return [
-            new self(1, 'Urbano', 'urbano', '/assets/imagenes/urbano.png'),
-            new self(2, 'Jazz', 'jazz', 'https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=600&q=80'),
-            new self(3, 'Contemporáneo', 'contemporaneo', 'https://images.unsplash.com/photo-1547153760-18fc86324498?w=600&q=80'),
-            new self(4, 'Clásico', 'clasico', 'https://images.unsplash.com/photo-1518834345639-29cb29eeaa1b?w=600&q=80'),
-            new self(5, 'Ballet Fit', 'ballet-fit', 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80'),
-            new self(6, 'Ensayos', 'ensayos', 'https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?w=600&q=80'),
+            new self(1, 'Urbano', 'urbano', self::IMG_URBANO),
+            new self(2, 'Jazz', 'jazz', self::IMG_BAILARINA),
+            new self(3, 'Contemporáneo', 'contemporaneo', self::IMG_CASUAL),
+            new self(4, 'Clásico', 'clasico', self::IMG_URBAN),
+            new self(5, 'Ballet Fit', 'ballet-fit', self::IMG_URBAN2),
+            new self(6, 'Ensayos', 'ensayos', self::IMG_BAILARINA),
         ];
     }
 

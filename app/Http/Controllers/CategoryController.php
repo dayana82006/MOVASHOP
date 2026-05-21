@@ -27,10 +27,10 @@ final class CategoryController extends Controller
                     ['icon' => 'dance', 'title' => 'Diseños que fluyen', 'text' => 'Libertad total para expresarte.'],
                 ],
                 'products' => [
-                    ['name' => 'Sudadera capucha Urbano', 'old' => '$56.000 COP', 'price' => '$45.000 COP', 'img' => 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80'],
-                    ['name' => 'Hoodie gráfico MOVA', 'old' => '$52.000 COP', 'price' => '$42.000 COP', 'img' => 'https://images.unsplash.com/photo-1578587018452-892b21fd22d1?w=600&q=80'],
-                    ['name' => 'Top oversize Urbano', 'old' => '$48.000 COP', 'price' => '$38.000 COP', 'img' => 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80'],
-                    ['name' => 'Sudadera cropped Street', 'old' => '$54.000 COP', 'price' => '$44.000 COP', 'img' => 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80'],
+                    ['name' => 'Sudadera capucha Urbano', 'old' => '$56.000 COP', 'price' => '$45.000 COP', 'img' => '/assets/imagenes/urban.png'],
+                    ['name' => 'Hoodie gráfico MOVA', 'old' => '$52.000 COP', 'price' => '$42.000 COP', 'img' => '/assets/imagenes/urban2.png'],
+                    ['name' => 'Top oversize Urbano', 'old' => '$48.000 COP', 'price' => '$38.000 COP', 'img' => '/assets/imagenes/urbano.png'],
+                    ['name' => 'Sudadera cropped Street', 'old' => '$54.000 COP', 'price' => '$44.000 COP', 'img' => '/assets/imagenes/bailarinainicio.png'],
                 ],
             ]);
         }

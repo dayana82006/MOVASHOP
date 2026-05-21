@@ -6,6 +6,11 @@ namespace App\Models;
 
 final class Promotion
 {
+    private const IMG_BAILARINA = '/assets/imagenes/bailarinainicio.png';
+    private const IMG_CASUAL = '/assets/imagenes/casualinicio.png';
+    private const IMG_URBAN = '/assets/imagenes/urban.png';
+    private const IMG_URBAN2 = '/assets/imagenes/urban2.png';
+
     public function __construct(
         public readonly string $eyebrow,
         public readonly string $title,
@@ -28,7 +33,7 @@ final class Promotion
                 'Estilo, comodidad y libertad en cada movimiento.',
                 'Explorar colecciones',
                 '#colecciones',
-                '/assets/imagenes/inicio.png',
+                self::IMG_BAILARINA,
             ),
             new self(
                 'NUEVA TEMPORADA',
@@ -37,7 +42,7 @@ final class Promotion
                 'Telas premium para que solo pienses en bailar.',
                 'Ver novedades',
                 '#nueva-coleccion',
-                'https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=900&q=85',
+                self::IMG_CASUAL,
             ),
             new self(
                 'MOVA STUDIO',
@@ -46,7 +51,7 @@ final class Promotion
                 'Piezas versátiles para clase y escenario.',
                 'Descubrir estilos',
                 '#estilos',
-                'https://images.unsplash.com/photo-1547153760-18fc86324498?w=900&q=85',
+                self::IMG_URBAN,
             ),
         ];
     }
@@ -60,7 +65,7 @@ final class Promotion
             'Descubre las nuevas piezas que combinan diseño, funcionalidad y tu pasión por el baile.',
             'Ver colección',
             '#',
-            'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&q=85',
+            self::IMG_URBAN2,
         );
     }
 }
